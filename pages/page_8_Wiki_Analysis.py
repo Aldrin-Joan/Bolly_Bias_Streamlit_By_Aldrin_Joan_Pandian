@@ -3,10 +3,11 @@
 import streamlit as st
 import os  # ✅ Add this
 from modules import wiki_analysis
+from modules.sidebar import render_sidebar
 
 st.set_page_config(page_title="📚 Step 8: Wikipedia Gender Bias", layout="wide")
 st.title("📚 Step 8: Wikipedia-based Gender Analysis")
-
+render_sidebar()
 st.markdown("""
 This module performs **Wikipedia-derived** bias analysis across 5 dimensions:
 - Verbs over time (by gender)

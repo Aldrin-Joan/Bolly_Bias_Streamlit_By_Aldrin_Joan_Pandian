@@ -3,8 +3,10 @@
 import streamlit as st
 from PIL import Image
 from modules.poster_analysis import detect_poster_bias, generate_poster_pdf
+from modules.sidebar import render_sidebar
 
 st.set_page_config(page_title="🎨 Step 6: Poster Bias Detection", layout="wide")
+render_sidebar()
 st.title("🎨 Step 6: Poster Bias Detection using LLaVA")
 st.markdown("Upload a movie poster image to analyze for visual gender bias using **LLaVA-1.5**.")
 

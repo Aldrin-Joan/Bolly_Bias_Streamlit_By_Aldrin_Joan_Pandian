@@ -5,8 +5,10 @@ import pandas as pd
 import uuid
 import tempfile
 from modules.report_generation import generate_feedback_report
+from modules.sidebar import render_sidebar
 
 st.set_page_config(page_title="📊 Step 5: Feedback Report", layout="wide")
+render_sidebar()  # 👈 And call this
 st.title("📊 Step 5: Generate Feedback Report (CSV + PDF)")
 st.markdown("Upload the rewritten script CSV and generate a ranked feedback report.")
 

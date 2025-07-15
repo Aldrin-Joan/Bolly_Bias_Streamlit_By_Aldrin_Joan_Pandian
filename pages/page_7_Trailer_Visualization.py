@@ -4,8 +4,10 @@ import streamlit as st
 import os
 from modules.trailer_viz import generate_trailer_plots
 from PIL import Image
+from modules.sidebar import render_sidebar
 
 st.set_page_config(page_title="🎞️ Step 7: Trailer Emotion Trends", layout="wide")
+render_sidebar()
 st.title("🎞️ Step 7: Gender–Emotion Analysis in Trailers")
 
 uploaded_file = st.file_uploader("🎥 Upload trailer emotion CSV", type=["csv"])

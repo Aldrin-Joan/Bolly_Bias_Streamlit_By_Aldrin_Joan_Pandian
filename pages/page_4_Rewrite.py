@@ -6,8 +6,10 @@ from io import BytesIO
 from modules.rewriting import rewrite_biased_line
 from config import load_model_tokenizer
 from tqdm import tqdm
+from modules.sidebar import render_sidebar
 
 st.set_page_config(page_title="✍️ Step 4: Rewrite Biased Lines", layout="wide")
+render_sidebar()
 st.title("✍️ Step 4: Rewriting Stereotypical Lines")
 st.markdown("Upload the bias-annotated CSV (from Step 3). Biased lines will be rewritten using LLM prompts.")
 
