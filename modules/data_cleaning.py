@@ -7,11 +7,7 @@ import re
 from gender_guesser.detector import Detector
 
 # Load spaCy English model and gender detector once
-try:
-    nlp = spacy.load("en_core_web_sm")
-except OSError:
-    download("en_core_web_sm")
-    nlp = spacy.load("en_core_web_sm")
+nlp = spacy.load("en_core_web_sm")
 gender_detector = Detector()
 
 def extract_script_text(pdf_file):
