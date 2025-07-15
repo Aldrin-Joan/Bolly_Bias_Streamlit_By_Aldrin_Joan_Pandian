@@ -1,13 +1,17 @@
 # modules/data_cleaning.py
-
 import fitz  # PyMuPDF
 import spacy
+from spacy.cli import download
 import pandas as pd
 import re
 from gender_guesser.detector import Detector
 
 # Load spaCy English model and gender detector once
-nlp = spacy.load("en_core_web_sm")
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    download("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
 gender_detector = Detector()
 
 def extract_script_text(pdf_file):
